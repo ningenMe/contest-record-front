@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
 
@@ -19,7 +19,7 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@deploy
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -27,19 +27,15 @@ jobs:
     - run: yarn install
     - run: yarn build
 
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: aws-credential-setup
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-northeast-1
-      
-      - name: sync
-        env: 
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        run: |
-          aws s3 sync build s3://$AWS_S3_BUCKET/ --delete
+    - name: aws-credential-setup
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-northeast-1
+    
+    - name: sync
+      env: 
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      run: |
+        aws s3 sync build s3://$AWS_S3_BUCKET/ --delete
