@@ -5,7 +5,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-      <Navbar.Brand href="#home">Contest Record</Navbar.Brand>
+      <Navbar.Brand href="#home">contest record</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
