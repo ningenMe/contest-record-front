@@ -11,7 +11,7 @@ export default class Main extends React.Component {
         <HashRouter>
           <Route exact path='/' component={Home} />
           <Route path='/home' component={Home} />
-          <Route path='/users/:user_id' component={User} />
+          <Route path='/users/:userId' component={User} />
         </HashRouter>
       </Container>
     );
