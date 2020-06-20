@@ -4,15 +4,13 @@
 ## これは何？
 https://contest-record.ningenme.net のフロントエンド
 
-## アーキテクチャなど
-#### rooting
-- Cloud Front
-#### hosting
-- S3
-#### ci/cd
-- github actions
-#### application
-- React
+## アーキテクチャ  
+|            |                |  
+|----------- |--------------- |  
+|rooting     | Cloud Front    |  
+|hosting     | S3             |  
+|ci/cd       | github actions |  
+|application | React          |  
 
 #### ローカルで実行するとき
 ```
