@@ -1,5 +1,5 @@
 import React  from 'react';
-import {Box,Card,CardContent,Typography} from '@material-ui/core';
+import {Box,Card} from '@material-ui/core';
 
 export default class TextListCard extends React.Component {
     render() {
