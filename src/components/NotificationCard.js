@@ -5,7 +5,7 @@ export default class TextListCard extends React.Component {
     render() {
         return (
             <Box p={1}>
-                <Card gutterBottom style={{ backgroundColor: '#CBFFD3'}}>
+                <Card gutterBottom style={{ backgroundColor: '#CBFFD3', display:'flex', justifyContent:'center' }}>
                         {this.props.body}
                 </Card> 
             </Box>

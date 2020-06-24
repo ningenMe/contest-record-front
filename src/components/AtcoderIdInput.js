@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import { Link } from "react-router-dom";
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 
 export default function StateTextFields() {
   const [atcoderId, setAtcoderId] = React.useState('');
@@ -13,12 +14,20 @@ export default function StateTextFields() {
     <TextField
       required
       id="outlined-name"
-      label="atcoder_id"
+      label="atcoder id"
       value={atcoderId}
       onChange={handleChange}
       variant="outlined"
+      size="small"
     />
-    <Link to={"/users/"+atcoderId}><button class="btn btn-primary">go</button></Link>
+    <Button 
+      variant="outlined"
+      color="primary"
+      href={"#/users/"+atcoderId}
+      size="large"
+    >
+      go
+    </Button>
   </div>
 );
 }
