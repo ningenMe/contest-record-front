@@ -1,5 +1,5 @@
 import React  from 'react';
-import {Box,Card,Container} from '@material-ui/core';
+import {Box,Card} from '@material-ui/core';
 import AtcoderIdInput from '../components/AtcoderIdInput';
 import Grid from '@material-ui/core/Grid';
 
