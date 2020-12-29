@@ -1,9 +1,9 @@
 import React from 'react';
 import { HashRouter, Route, Redirect } from 'react-router-dom'
 import Container from '@material-ui/core/Container'
-import Home from './pages/Home'
-import TwitterSearch from './pages/TwitterSearch'
-import Path from './components/Path'
+import Home from '../pages/Home'
+import TwitterSearch from '../pages/TwitterSearch'
+import Path from './Path'
 
 export const Router: React.FC = () => {
     return (
