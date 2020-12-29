@@ -1,11 +1,10 @@
 import React from 'react';
 
-export const Home: React.FC = () => {
+export const Root: React.FC = () => {
     return (
         <div>
-            home!
+            root!
         </div>
       );
     }
-    
-export default Home
+export default Root
