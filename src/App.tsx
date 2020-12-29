@@ -1,9 +1,9 @@
 import React from 'react';
-import PathRouter from './components/PathRouter'
+import Router from './components/Router'
 
 export const App: React.FC = () => {
     return (
-      <PathRouter />
+      <Router />
       );
     }
 export default App
