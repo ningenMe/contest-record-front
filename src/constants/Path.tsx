@@ -1,6 +1,10 @@
 export const Path = {
-        root: '/',
+        root:         '/',
+        home:         '/home',
         twitterSeach: '/twitter-search',
-        bingo: '/bingo'
+        bingo:        '/bingo',
+        transition: (path: string) => {
+            return '#' + path;
+        }
     }   
 export default Path
