@@ -12,7 +12,7 @@ export const GitHub: React.FC = () => {
     return (
         <Dropdown isOpen={gitHubToggleOpen} toggle={toggleGitHub}>
             <DropdownToggle>
-                <img src='GitHub-Mark-32px.png' width="20" height="20"/>
+                <img src='GitHub-Mark-32px.png' width="20" height="20" alt="GitHub"/>
             </DropdownToggle>
             <DropdownMenu>
                 <DropdownItem target="_blank" href={LinkUrl.uiGitHub.url} >{LinkUrl.uiGitHub.name} </DropdownItem>
