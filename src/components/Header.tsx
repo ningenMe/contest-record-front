@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
 
     return (
     <Navbar color="dark" dark expand="lg">
-        <NavbarBrand href={Url.contestRecord} >ningenMe.net</NavbarBrand>
+        <NavbarBrand href={Url.contestRecord} >Contest Record</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
