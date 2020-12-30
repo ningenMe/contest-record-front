@@ -1,24 +1,38 @@
 import React, { useState } from 'react';
-import {Collapse,Nav,Navbar,NavbarBrand,NavbarToggler,NavLink,NavItem } from 'reactstrap';
-import Url from '../constants/Url'
-import Path from '../constants/Path'
+import { Collapse,
+         Nav,
+         Navbar,
+         NavbarBrand,
+         NavbarToggler,
+         NavLink,
+         NavItem,
+        } from 'reactstrap';
+import GitHub from './GitHub'
+import LinkPath from '../constants/LinkPath'
+import LinkUrl from '../constants/LinkUrl'
 
 export const Header: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+    const [navbarToggleOpen, setNavbarToggleOpen] = useState(false);
+    const toggleNavbar = () => setNavbarToggleOpen(!navbarToggleOpen);
 
     return (
     <Navbar color="dark" dark expand="lg">
-        <NavbarBrand href={Url.contestRecord} >ningenMe.net</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <NavbarBrand href={LinkUrl.contestRecord.url} >{LinkUrl.contestRecord.name}</NavbarBrand>
+        <NavbarToggler onClick={toggleNavbar} />
+        <Collapse isOpen={navbarToggleOpen} navbar>
             <Nav className="mr-auto" navbar>
                 <NavItem>
-                    <NavLink href={Path.transition(Path.home)}>home</NavLink>
+                    <NavLink href={LinkPath.transition(LinkPath.home.url)}>{LinkPath.home.name}</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href={Path.transition(Path.bingo)}>bingo</NavLink>
+                    <NavLink href={LinkPath.transition(LinkPath.bingo.url)}>{LinkPath.bingo.name}</NavLink>
                 </NavItem>
+            </Nav>
+            <Nav className="ml-auto" navbar>
+                <NavItem>
+                    <NavLink href={LinkUrl.twitterNingenMe.url}>{LinkUrl.twitterNingenMe.name}</NavLink>
+                </NavItem>
+                <GitHub/>
             </Nav>
         </Collapse>
     </Navbar>
