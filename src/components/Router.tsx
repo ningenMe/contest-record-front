@@ -14,6 +14,7 @@ export const PathRouter: React.FC = () => {
             <Route exact path={LinkPath.twitter.url}          component={TwitterSearch} />
             <Route exact path={LinkPath.atcoderBingo.url}     component={AtcoderBingo} />
             <Route exact path={LinkPath.atcoderBingoUser.url} component={AtcoderBingo} />
+            <Route exact path={LinkPath.root.url}             component={Home} />
         </HashRouter>
       );
     }

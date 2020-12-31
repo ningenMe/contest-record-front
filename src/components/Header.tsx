@@ -21,9 +21,9 @@ export const Header: React.FC = () => {
         <NavbarToggler onClick={toggleNavbar} />
         <Collapse isOpen={navbarToggleOpen} navbar>
             <Nav className="mr-auto" navbar>
-                <NavItem>
+                {/* <NavItem>
                     <NavLink href={LinkPath.transition(LinkPath.home.url)}>{LinkPath.home.name}</NavLink>
-                </NavItem>
+                </NavItem> */}
                 <NavItem>
                     <NavLink href={LinkPath.transition(LinkPath.atcoderBingo.url)}>{LinkPath.atcoderBingo.name}</NavLink>
                 </NavItem>
