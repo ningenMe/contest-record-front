@@ -13,7 +13,7 @@ const rows = [
     createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export const BingoRanking: React.FC = () => {      
+export const AtcoderBingoRanking: React.FC = () => {      
     return (
         <Table size="small" aria-label="a dense table">
             <TableHead>
@@ -41,4 +41,4 @@ export const BingoRanking: React.FC = () => {
         </Table>
     );
 }
-export default BingoRanking
+export default AtcoderBingoRanking

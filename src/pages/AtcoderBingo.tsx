@@ -1,26 +1,22 @@
 import React from 'react';
-import {Box, Container, TextField} from '@material-ui/core';
-import BingoRanking from '../components/BingoRanking'
+import {Box, Container} from '@material-ui/core';
 import {RouteComponentProps} from 'react-router-dom'
+
+import AtcoderBingoRanking from '../components/AtcoderBingoRanking'
+import AtcoderBingoSearch from '../components/AtcoderBingoSearch'
 
 type PageProps = {} & RouteComponentProps<{atcoderId: string}>;
 
 export const AtcoderBingo: React.FC<PageProps> = (props) => {
     return (
         <Container>
-            <Box m={3}>
-                <TextField
-                    required
-                    id="outlined-required"
-                    label="atcoder id"
-                    variant="outlined"
-                />
+            <Box m={5}>
+                <AtcoderBingoSearch atcoderId={props.match.params.atcoderId}/>
             </Box>
-            {props.match.params.atcoderId}
-            <Box m={1}>
-                <BingoRanking/>
+            <Box m={5}>
+                <AtcoderBingoRanking/>
             </Box>
         </Container>
-      );
-    }
+    );
+}
 export default AtcoderBingo
