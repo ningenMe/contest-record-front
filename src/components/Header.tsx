@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
                     <NavLink href={LinkPath.transition(LinkPath.home.url)}>{LinkPath.home.name}</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href={LinkPath.transition(LinkPath.bingo.url)}>{LinkPath.bingo.name}</NavLink>
+                    <NavLink href={LinkPath.transition(LinkPath.atcoderBingo.url)}>{LinkPath.atcoderBingo.name}</NavLink>
                 </NavItem>
             </Nav>
             <Nav className="ml-auto" navbar>
