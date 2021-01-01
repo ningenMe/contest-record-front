@@ -6,7 +6,8 @@ import AtcoderBingoRankingTableHead  from '../atoms/AtcoderBingoRankingTableHead
 import AtcoderBingoRankingTableBody from '../atoms/AtcoderBingoRankingTableBody'
 
 interface InnerProps{
-    atcoderId: string
+    atcoderId: string,
+    bingoType: string
 };
 
 export const AtcoderBingoRanking: React.FC<InnerProps> = (props) => {
