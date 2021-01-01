@@ -4,11 +4,11 @@ import {useHistory} from 'react-router-dom'
 
 import LinkPath from '../constants/LinkPath'
 
-type Props = {
+interface InnerProps{
     atcoderId: string
 }
 
-export const AtcoderBingoSearch: React.FC<Props> = (props) => {      
+export const AtcoderBingoSearch: React.FC<InnerProps> = (props) => {      
     const [atcoderId, setAtcoderId] = useState(props.atcoderId);
     const reflectAtcoderId = (event: React.ChangeEvent<HTMLInputElement>) => {
         setAtcoderId(event.target.value);
