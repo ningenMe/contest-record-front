@@ -6,7 +6,7 @@ import NotificationContents from '../constants/NotificationContents'
 export const Notification: React.FC = () => {
 
     return (
-        <Card style={{ backgroundColor: '#FFFFCC'}}>
+        <Card style={{ backgroundColor: '#FEFAE3'}}>
             <Typography variant="h6" align="left" style={{ backgroundColor: '#483D8B', color: '#FFFFEE'}}>
                 Notification
             </Typography>

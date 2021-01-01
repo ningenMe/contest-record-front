@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Typography} from '@material-ui/core';
 
-export const AtcoderBingoTop: React.FC = () => {
+export const AtcoderBingoTopTitle: React.FC = () => {
     return (
         <Typography component="div">
             <Box fontSize="h3.fontSize" fontWeight="fontWeightBold">
@@ -10,4 +10,4 @@ export const AtcoderBingoTop: React.FC = () => {
         </Typography>
     );
 }
-export default AtcoderBingoTop
+export default AtcoderBingoTopTitle
