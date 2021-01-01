@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card,CardContent,Typography} from '@material-ui/core';
+import AtcoderBingoContents from '../constants/AtcoderBingoContents'
 
 export const AtcoderBingoTopCard: React.FC = () => {
 
@@ -7,7 +8,7 @@ export const AtcoderBingoTopCard: React.FC = () => {
         <Card style={{ backgroundColor: '#FEFAE3'}}>
             <CardContent>
                 <Typography align="left">
-                    AtCoderのコンテスト順位で1-25位を取った結果を確認できるアプリケーションです。
+                    {AtcoderBingoContents.card}
                 </Typography>
             </CardContent>
         </Card>
