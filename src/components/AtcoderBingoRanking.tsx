@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import {Table,TableBody,TableCell,TableRow} from '@material-ui/core'
+import {Table} from '@material-ui/core'
 import BingoRank from '../interface/BingoRank'
 import AtcoderUserBingoGetRepository from '../repository/AtcoderUserBingoGetRepository'
 import AtcoderBingoRankingTableHead  from '../atoms/AtcoderBingoRankingTableHead'
