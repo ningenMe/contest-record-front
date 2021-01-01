@@ -16,6 +16,7 @@ export const AtcoderBingoRanking: React.FC<InnerProps> = (props) => {
     }
     useEffect(() => {
         fetchRows();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     return (
