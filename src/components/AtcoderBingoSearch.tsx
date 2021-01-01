@@ -38,7 +38,6 @@ export const AtcoderBingoSearch: React.FC<InnerProps> = (props) => {
             <TextField 
                 id="standard-select-currency"
                 select
-                label="bingo type"
                 variant="outlined"
                 defaultValue={bingoType}
                 onChange={reflectBingoType}
@@ -50,7 +49,12 @@ export const AtcoderBingoSearch: React.FC<InnerProps> = (props) => {
                         </MenuItem>
                     ))}
             </TextField>
-            <Button variant="contained" onClick={transitionAtcoderBingoUser} size="large">search</Button>
+            <Button
+                variant="contained"
+                onClick={transitionAtcoderBingoUser}
+                size="large"
+            >search
+            </Button>
         </>
     );
 }
