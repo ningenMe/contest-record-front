@@ -14,7 +14,7 @@ export const AtcoderBingo: React.FC<PageProps> = (props) => {
                 <AtcoderBingoSearch atcoderId={props.match.params.atcoderId}/>
             </Box>
             <Box m={5}>
-                <AtcoderBingoRanking/>
+                <AtcoderBingoRanking atcoderId={props.match.params.atcoderId}/>
             </Box>
         </Container>
     );
