@@ -4,12 +4,16 @@ import {RouteComponentProps} from 'react-router-dom'
 
 import AtcoderBingoRanking from '../components/AtcoderBingoRanking'
 import AtcoderBingoSearch from '../components/AtcoderBingoSearch'
+import AtcoderBingoTop from '../atoms/AtcoderBingoTop'
 
 type PageProps = {} & RouteComponentProps<{atcoderId: string}>;
 
 export const AtcoderBingo: React.FC<PageProps> = (props) => {
     return (
         <Container>
+            <Box m={5}>
+                <AtcoderBingoTop/>
+            </Box>
             <Box m={5}>
                 <AtcoderBingoSearch atcoderId={props.match.params.atcoderId}/>
             </Box>
