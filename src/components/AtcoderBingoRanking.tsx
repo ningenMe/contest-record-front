@@ -14,7 +14,6 @@ export const AtcoderBingoRanking: React.FC<InnerProps> = (props) => {
     const [bingoRanks, setRows] = useState<BingoRank[]>([]);
     const fetchRows = async () => {
         setRows(await AtcoderUserBingoGetRepository(props.atcoderId,props.bingoType));
-        console.log(bingoRanks);
     }
     useEffect(() => {
         fetchRows();
