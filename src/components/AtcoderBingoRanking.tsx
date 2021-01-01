@@ -6,23 +6,24 @@ import AtcoderBingoRankingTableHead  from '../atoms/AtcoderBingoRankingTableHead
 import AtcoderBingoRankingTableBody from '../atoms/AtcoderBingoRankingTableBody'
 
 interface InnerProps{
-    atcoderId: string
+    atcoderId: string,
+    bingoType: string
 };
 
 export const AtcoderBingoRanking: React.FC<InnerProps> = (props) => {
-    const [rows, setRows] = useState<BingoRank[]>([]);
+    const [bingoRanks, setRows] = useState<BingoRank[]>([]);
     const fetchRows = async () => {
-        setRows(await AtcoderUserBingoGetRepository(props.atcoderId));
+        setRows(await AtcoderUserBingoGetRepository(props.atcoderId,props.bingoType));
+        console.log(bingoRanks);
     }
     useEffect(() => {
         fetchRows();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
-
+    },[props.atcoderId,props.bingoType]);
     return (
         <Table size="small" aria-label="a dense table">
             <AtcoderBingoRankingTableHead />
-            <AtcoderBingoRankingTableBody bingoRanks={rows} />
+            <AtcoderBingoRankingTableBody bingoRanks={bingoRanks} />
         </Table>
     );
 }
