@@ -25,8 +25,7 @@ export const AtcoderBingoSearch: React.FC<InnerProps> = (props) => {
                 id="outlined-required"
                 label="atcoder id"
                 variant="outlined"
-                placeholder="input atcoder-id"
-                value={atcoderId}
+                placeholder="input atcoder id"
                 onChange={reflectAtcoderId}
             />
             <Button variant="contained" onClick={transitionAtcoderBingoUser} size="large">search</Button>

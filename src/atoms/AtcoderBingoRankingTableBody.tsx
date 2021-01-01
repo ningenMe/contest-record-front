@@ -1,6 +1,7 @@
 import React from 'react';
 import {TableBody,TableCell,TableRow} from '@material-ui/core'
 import BingoRank from '../interface/BingoRank'
+import { NavLink } from 'reactstrap';
 
 interface InnerProps{
     bingoRanks:BingoRank[]
@@ -13,8 +14,9 @@ export const AtcoderBingoRankingTableBody: React.FC<InnerProps> = (props) => {
             props.bingoRanks.map((bingoRank) => (
                 <TableRow key={bingoRank.place}>
                     <TableCell component="th" scope="row">{bingoRank.place}</TableCell>
-                    <TableCell>{bingoRank.contestName}</TableCell>
-                    <TableCell>{bingoRank.url}</TableCell>
+                    <TableCell>
+                        <NavLink href={bingoRank.url} target={"_blank"}>{bingoRank.contestId}</NavLink>
+                    </TableCell>
                 </TableRow>
             ))
         }

@@ -10,19 +10,19 @@ interface InnerProps{
 };
 
 export const AtcoderBingoRanking: React.FC<InnerProps> = (props) => {
-    const [rows, setRows] = useState<BingoRank[]>([]);
+    const [bingoRanks, setRows] = useState<BingoRank[]>([]);
     const fetchRows = async () => {
         setRows(await AtcoderUserBingoGetRepository(props.atcoderId));
+        console.log(bingoRanks);
     }
     useEffect(() => {
         fetchRows();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
-
+    },[props.atcoderId]);
     return (
         <Table size="small" aria-label="a dense table">
             <AtcoderBingoRankingTableHead />
-            <AtcoderBingoRankingTableBody bingoRanks={rows} />
+            <AtcoderBingoRankingTableBody bingoRanks={bingoRanks} />
         </Table>
     );
 }

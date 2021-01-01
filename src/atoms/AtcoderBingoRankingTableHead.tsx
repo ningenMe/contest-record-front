@@ -5,7 +5,6 @@ export const AtcoderBingoRankingTableHead = () => {
         <TableHead>
             <TableRow>
                 <TableCell>place</TableCell>
-                <TableCell>contestName</TableCell>
                 <TableCell>url</TableCell>
             </TableRow>
         </TableHead>
