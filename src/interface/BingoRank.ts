@@ -3,5 +3,6 @@ export default interface BingoRank{
     readonly atcoderId:   string,
     readonly contestId:   string, 
     readonly contestName: string, 
-    readonly url:         string
+    readonly url:         string,
+    readonly performance: number
 }

@@ -7,7 +7,6 @@ import AtcoderBingoSearch from '../components/AtcoderBingoSearch'
 import AtcoderBingoTopTitle from '../atoms/AtcoderBingoTopTitle'
 import AtcoderBingoTopCard from '../atoms/AtcoderBingoTopCard'
 import queryString from 'query-string'
-import AtcoderBingoTweetIcon from '../components/AtcoderBingoTweetIcon';
 
 type PageProps = {} & RouteComponentProps<{atcoderId: string, bingoType: string}>;
 
@@ -25,9 +24,6 @@ export const AtcoderBingo: React.FC<PageProps> = (props) => {
             </Box>
             <Box m={3}>
                 <AtcoderBingoSearch atcoderId={props.match.params.atcoderId} bingoType={bingoType}/>
-            </Box>
-            <Box m={1}>
-                <AtcoderBingoTweetIcon atcoderId={props.match.params.atcoderId} bingoType={bingoType}/>
             </Box>
             <Box m={1}>
                 <AtcoderBingoRanking atcoderId={props.match.params.atcoderId} bingoType={bingoType}/>
