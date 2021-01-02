@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card,CardContent,Typography} from '@material-ui/core';
 import {Badge} from 'reactstrap'
-import NotificationContents from '../constants/NotificationContents'
+import HomeContents from '../constants/HomeContents'
 
 export const Notification: React.FC = () => {
 
@@ -12,7 +12,7 @@ export const Notification: React.FC = () => {
             </Typography>
             <CardContent>
                 {
-                    NotificationContents.map((item) => (
+                    HomeContents.notification.map((item) => (
                         <Typography align="left">
                             <Badge color="info" style={{margin: 6,padding: 6}}> {item.date} </Badge>
                             {item.text}
