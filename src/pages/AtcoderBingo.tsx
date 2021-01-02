@@ -27,9 +27,6 @@ export const AtcoderBingo: React.FC<PageProps> = (props) => {
                 <AtcoderBingoSearch atcoderId={props.match.params.atcoderId} bingoType={bingoType}/>
             </Box>
             <Box m={1}>
-                <AtcoderBingoTweetIcon atcoderId={props.match.params.atcoderId} bingoType={bingoType}/>
-            </Box>
-            <Box m={1}>
                 <AtcoderBingoRanking atcoderId={props.match.params.atcoderId} bingoType={bingoType}/>
             </Box>
         </Container>
