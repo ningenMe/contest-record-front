@@ -16,7 +16,7 @@ export const AtcoderBingoTweetIcon: React.FC<InnerProps> = (props) => {
     }    
     else {
         return (
-            <TweetIcon text={props.atcoderId+"のAtCoder Bingoは" + props.percentage + "%25"} url={LinkUrl.contestRecord.url + "/%23" + LinkPath.atcoderBingo.url + "/" + props.atcoderId + "?bingoType=" + props.bingoType}/>
+            <TweetIcon text={props.atcoderId+"'s AtCoder Bingo: " + props.percentage + "%25"} url={LinkUrl.contestRecord.url + "/%23" + LinkPath.atcoderBingo.url + "/" + props.atcoderId + "?bingoType=" + props.bingoType}/>
         );
     }
 }
