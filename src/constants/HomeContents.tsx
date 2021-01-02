@@ -8,6 +8,6 @@ const notification : Message[] = [
 export const HomeContents = {
     notification,
     title: "Contest Record",
-    card: "競技プログラミング関連のwebアプリケーションのサイトです。ナビゲーションバーに順次機能追加していきます。不具合は上記リンクの@ningenMeまで。"
+    card: "競技プログラミング関連のwebアプリケーションです。ナビゲーションバーに機能追加していく予定です。不具合は上記リンクの@ningenMeまで。"
 }
 export default HomeContents
