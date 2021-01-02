@@ -7,7 +7,6 @@ import AtcoderBingoSearch from '../components/AtcoderBingoSearch'
 import AtcoderBingoTopTitle from '../atoms/AtcoderBingoTopTitle'
 import AtcoderBingoTopCard from '../atoms/AtcoderBingoTopCard'
 import queryString from 'query-string'
-import AtcoderBingoTweetIcon from '../components/AtcoderBingoTweetIcon';
 
 type PageProps = {} & RouteComponentProps<{atcoderId: string, bingoType: string}>;
 
